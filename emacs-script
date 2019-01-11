@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -z "$1" ]
+  then
+    echo "No file name provided!"
+    exit
+fi
+
+osascript $(dirname $(realpath $0))/emacsclient $@
+
